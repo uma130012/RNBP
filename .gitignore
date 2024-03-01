@@ -39,6 +39,13 @@ local.properties
 node_modules/
 npm-debug.log
 yarn-error.log
+package-lock.json
+
+# BUCK
+buck-out/
+\.buckd/
+*.keystore
+!debug.keystore
 
 # fastlane
 #
@@ -57,6 +64,7 @@ yarn-error.log
 
 # Ruby / CocoaPods
 /ios/Pods/
+/ios/Podfile.lock/
 /vendor/bundle/
 
 # Temporary files created by Metro to check the health of the file watcher
