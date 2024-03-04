@@ -59,11 +59,11 @@ export default Button;
 const styling = (colors: any) =>
   StyleSheet.create({
     buttonStyle: {
-      maxHeight: ms(40),
-      height: ms(40),
+      maxHeight: ms(44),
+      height: ms(44),
       justifyContent: 'center',
       alignSelf: 'stretch',
-      borderRadius: 5,
+      borderRadius: 8,
       flexDirection: 'row',
     },
     outline: {

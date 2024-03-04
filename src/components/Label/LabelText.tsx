@@ -15,6 +15,6 @@ const styles = StyleSheet.create({
   label: {
     fontFamily: fonts.regular,
     fontSize: ms(14),
-    color: colors.white,
+    color: colors.black,
   },
 });
