@@ -6,41 +6,19 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  useColorScheme,
-} from 'react-native';
-
-import {NavigationContainer} from '@react-navigation/native';
-import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
-import {Welcome} from './src/screens';
-import {dark, light} from './src/theme';
 import {Router} from './src/navigation';
+import {Provider} from 'react-redux';
+import {persistor, store} from './src/redux/store/store';
+import {PersistGate} from 'redux-persist/integration/react';
 
 function App(): JSX.Element {
-  return <Router />;
+  return (
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <Router />
+      </PersistGate>
+    </Provider>
+  );
 }
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
 
 export default App;
