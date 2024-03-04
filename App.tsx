@@ -18,19 +18,10 @@ import {NavigationContainer} from '@react-navigation/native';
 import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
 import {Welcome} from './src/screens';
 import {dark, light} from './src/theme';
+import {Router} from './src/navigation';
 
 function App(): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <NavigationContainer theme={isDarkMode ? dark : light}>
-      <Welcome />
-    </NavigationContainer>
-  );
+  return <Router />;
 }
 
 const styles = StyleSheet.create({
