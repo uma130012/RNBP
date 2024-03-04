@@ -1,24 +1,35 @@
-export const colors = {
+import {Theme, DefaultTheme, DarkTheme} from '@react-navigation/native';
+
+const colors = {
   transparent: 'transparent',
   white: '#fff',
   black: '#000',
-  primary: '#e2aa29',
 };
 
-// const light: Theme = {
-//   dark: false,
-//   colors: {
-//     ...DefaultTheme.colors,
-//     ...colors,
-//   },
-// };
+type AppTheme = Theme & {
+  colors: Theme['colors'] & {
+    foreground: string;
+  };
+};
 
-// const dark: Theme = {
-//   dark: true,
-//   colors: {
-//     ...DarkTheme.colors,
-//     ...colors,
-//   },
-// };
+const light: AppTheme = {
+  dark: false,
+  colors: {
+    ...DefaultTheme.colors,
+    ...colors,
+    background: '#FAFAFA',
+    foreground: '#1A1A1A',
+  },
+};
 
-// export {colors,light,dark}
+const dark: AppTheme = {
+  dark: true,
+  colors: {
+    ...DarkTheme.colors,
+    ...colors,
+    background: '#1A1A1A',
+    foreground: '#FAFAFA',
+  },
+};
+
+export {light, dark, colors};

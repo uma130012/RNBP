@@ -14,6 +14,11 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-RNBP-RNBPTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-RNBP-RNBPTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		CE24F6B82B95E78C00B10985 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE24F6B32B95E78C00B10985 /* Poppins-Light.ttf */; };
+		CE24F6B92B95E78C00B10985 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE24F6B42B95E78C00B10985 /* Poppins-Medium.ttf */; };
+		CE24F6BA2B95E78C00B10985 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE24F6B52B95E78C00B10985 /* Poppins-Regular.ttf */; };
+		CE24F6BB2B95E78C00B10985 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE24F6B62B95E78C00B10985 /* Poppins-Bold.ttf */; };
+		CE24F6BC2B95E78C00B10985 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE24F6B72B95E78C00B10985 /* Poppins-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +48,11 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-RNBP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNBP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RNBP/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-RNBP-RNBPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNBP-RNBPTests.release.xcconfig"; path = "Target Support Files/Pods-RNBP-RNBPTests/Pods-RNBP-RNBPTests.release.xcconfig"; sourceTree = "<group>"; };
+		CE24F6B32B95E78C00B10985 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		CE24F6B42B95E78C00B10985 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		CE24F6B52B95E78C00B10985 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		CE24F6B62B95E78C00B10985 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		CE24F6B72B95E78C00B10985 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -86,6 +96,7 @@
 		13B07FAE1A68108700A75B9A /* RNBP */ = {
 			isa = PBXGroup;
 			children = (
+				CE24F6B22B95E78C00B10985 /* fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -146,6 +157,19 @@
 				89C6BE57DB24E9ADA2F236DE /* Pods-RNBP-RNBPTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CE24F6B22B95E78C00B10985 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CE24F6B32B95E78C00B10985 /* Poppins-Light.ttf */,
+				CE24F6B42B95E78C00B10985 /* Poppins-Medium.ttf */,
+				CE24F6B52B95E78C00B10985 /* Poppins-Regular.ttf */,
+				CE24F6B62B95E78C00B10985 /* Poppins-Bold.ttf */,
+				CE24F6B72B95E78C00B10985 /* Poppins-SemiBold.ttf */,
+			);
+			name = fonts;
+			path = ../src/assets/fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +267,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				CE24F6BC2B95E78C00B10985 /* Poppins-SemiBold.ttf in Resources */,
+				CE24F6BB2B95E78C00B10985 /* Poppins-Bold.ttf in Resources */,
+				CE24F6B92B95E78C00B10985 /* Poppins-Medium.ttf in Resources */,
+				CE24F6B82B95E78C00B10985 /* Poppins-Light.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				CE24F6BA2B95E78C00B10985 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,10 +629,7 @@
 					"-DFOLLY_MOBILE=1",
 					"-DFOLLY_USE_LIBCPP=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 			};
@@ -673,10 +699,7 @@
 					"-DFOLLY_MOBILE=1",
 					"-DFOLLY_USE_LIBCPP=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
