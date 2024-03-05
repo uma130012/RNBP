@@ -1,0 +1,36 @@
+export const Burmese = {
+  splash: {
+    welcome: 'ရေကြည်',
+    subHeading:
+      'သင်၏ cryptocurrency ကို ၀ ယ်ရန်၊ ရောင်းရန်နှင့်စီမံခန့်ခွဲရန်စာရင်းသွင်းပါ။',
+    createAccount: 'အကောင့်တစ်ခုဖန်တီးသည်',
+  },
+  login: {
+    welcomeBack: 'ကြိုဆိုပါတယ် !!',
+    loginDescription: 'ရှေ့ဆက်ရန် ကျေးဇူးပြု၍ အကောင့်ဝင်ပါ။',
+    emailAddress: 'အီးမေးလ်လိပ်စာ',
+    password: 'စကားဝှက်',
+    forgotPassword: 'စကားဝှက်မေ့နေပါသလား?',
+    login: 'လော့ဂ်အင်',
+    enterEmail: ' သင့်၏အီးမေးလ်လိပ်စာထည့်ပါ',
+    enterPass: 'စကားဝှက်',
+    noAccount: 'အကောင့်မရှိဘူးလား။',
+    alreadyAccount: 'အကောင့်ရှိပြီးသားလား?',
+  },
+  forgotPassword: {
+    reset: 'လျှို့ဝှတ်နံပါတ်အားမူလအတိုင်းပြန်လုပ်သည်',
+    description:
+      'အီးမေးလ်ကိုရိုက်ထည့်ပါ၊ စကားဝှက်ပြန်လည်သတ်မှတ်ခြင်းလင့်ခ်ကို သင့်အီးမေးလ်သို့ ပေးပို့ပါမည်။',
+    emailAddress: 'အီးမေးလ်လိပ်စာ',
+    remember: 'စကားဝှက်ကို မှတ်မိပါသလား။',
+    clickHere: 'ဤနေရာကိုကလစ်နှိပ်ပါ',
+    sendResetLink: 'Reset Link ပို့ပါ။',
+  },
+  tabs: {
+    home: 'အိမ်',
+    wallet: 'ပိုက်ဆံအိတ်',
+    chart: 'ဇယား',
+    txn: 'ငွေလွှဲခြင်း။',
+    profile: 'ကိုယ်ရေးအကျဉ်း',
+  },
+};

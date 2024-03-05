@@ -3,7 +3,7 @@
  * @ Author: Uma <uma.shankar@antiersolutions.com>
  * @ Create Time: 2024-03-01 12:20:38
  * @ Modified by: Uma
- * @ Modified time: 2024-03-05 10:37:20
+ * @ Modified time: 2024-03-05 17:28:54
  * @ Description:
  */
 
@@ -20,13 +20,14 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import persistStore from 'redux-persist/es/persistStore';
 import {sagaActions} from '../sagaActions';
 import rootSaga from '../saga';
-import {userReducer} from '../slices';
+import {settingsReducer, userReducer} from '../slices';
 
 /**
  * Root reducers combining different slices of the Redux store.
  */
 const reducers = combineReducers({
   user: userReducer,
+  setting: settingsReducer,
 });
 
 /**

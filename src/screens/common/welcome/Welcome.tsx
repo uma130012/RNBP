@@ -9,31 +9,29 @@ import {useDispatch} from 'react-redux';
 import {AppDispatch} from '../../../redux/store/store';
 import {setLogin} from '../../../redux/slices/user';
 import {AppTheme} from '../../../types';
+import {useTranslation} from 'react-i18next';
 
 export function Welcome() {
   const {colors}: AppTheme = useTheme();
   const styles = styling(colors);
   const dispatch = useDispatch<AppDispatch>();
-
+  const {t} = useTranslation();
   return (
     <Controller colors={colors}>
       <View style={styles.container}>
         <Image source={images.react_native_logo} style={styles.logo} />
-        <LabelText style={styles.mainTitle}>WELCOME</LabelText>
-        <LabelText style={styles.subTitle}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </LabelText>
+        <LabelText style={styles.mainTitle}>{t('splash.welcome')}</LabelText>
+        <LabelText style={styles.subTitle}>{t('splash.subHeading')}</LabelText>
       </View>
       <View style={styles.bottomContainer}>
         <Button
-          title="Login"
+          title={t('login.login')}
           outline={true}
           onPress={() => {
             dispatch(setLogin(true));
           }}
         />
-        <Button title="Create an Account" style={{marginTop: 16}} />
+        <Button title={t('splash.createAccount')} style={{marginTop: 16}} />
       </View>
     </Controller>
   );

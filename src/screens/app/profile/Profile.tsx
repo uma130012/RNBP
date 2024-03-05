@@ -3,7 +3,7 @@
  * @ Author: Uma <uma.shankar@antiersolutions.com>
  * @ Create Time: 2024-03-05 11:11:39
  * @ Modified by: Uma
- * @ Modified time: 2024-03-05 15:18:17
+ * @ Modified time: 2024-03-05 18:07:27
  * @ Description:
  */
 
@@ -18,15 +18,16 @@ import {
 import {View} from 'react-native';
 import {AppTheme} from '../../../types';
 import {resetReduxPersistData} from '../../../redux/reset/resetRedux';
+import {useTranslation} from 'react-i18next';
 
 export function Profile() {
   const {colors}: AppTheme = useTheme();
   const styles = controllerStyle(colors);
-
+  const {t} = useTranslation();
   return (
     <Controller colors={colors}>
       <View style={styles.childContainer}>
-        <LabelText style={styles.mainTitle}>Profile</LabelText>
+        <LabelText style={styles.mainTitle}>{t('tabs.profile')}</LabelText>
         <Button
           title="Logout"
           style={{width: '50%', alignSelf: 'center'}}
