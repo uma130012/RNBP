@@ -1,3 +1,12 @@
+/**
+ * @ Copyright: © 2024 Antier Solutions Pvt. Ltd.
+ * @ Author: Uma <uma.shankar@antiersolutions.com>
+ * @ Create Time: 2024-03-01 12:19:12
+ * @ Modified by: Uma
+ * @ Modified time: 2024-03-05 18:16:30
+ * @ Description:
+ */
+
 export const English = {
   splash: {
     welcome: 'WELCOME',
