@@ -1,8 +1,10 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
+ * @ Copyright: © 2024 Antier Solutions Pvt. Ltd.
+ * @ Author: Uma <uma.shankar@antiersolutions.com>
+ * @ Create Time: 2024-03-04 12:46:10
+ * @ Modified by: Uma
+ * @ Modified time: 2024-03-05 10:23:58
+ * @ Description:
  */
 
 import React from 'react';
