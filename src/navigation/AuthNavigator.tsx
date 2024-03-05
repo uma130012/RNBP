@@ -3,7 +3,7 @@
  * @ Author: Uma <uma.shankar@antiersolutions.com>
  * @ Create Time: 2024-03-01 12:55:30
  * @ Modified by: Uma
- * @ Modified time: 2024-03-05 10:25:09
+ * @ Modified time: 2024-03-05 11:38:13
  * @ Description:
  */
 
@@ -15,11 +15,13 @@ import {
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React, {PropsWithoutRef} from 'react';
 import {ForgotPassword, Login, OTP, Routes, SignUp, Welcome} from '../screens';
+import {navigationRef} from '.';
 
 const Stack = createNativeStackNavigator();
-export const navigationRef = createNavigationContainerRef();
 
-const AuthNavigator: React.FC<PropsWithoutRef<{theme: Theme}>> = ({theme}) => {
+export const AuthNavigator: React.FC<PropsWithoutRef<{theme: Theme}>> = ({
+  theme,
+}) => {
   return (
     <NavigationContainer ref={navigationRef} theme={theme}>
       <Stack.Navigator
@@ -34,5 +36,3 @@ const AuthNavigator: React.FC<PropsWithoutRef<{theme: Theme}>> = ({theme}) => {
     </NavigationContainer>
   );
 };
-
-export default AuthNavigator;

@@ -1,15 +1,10 @@
-import {Theme, DefaultTheme, DarkTheme} from '@react-navigation/native';
+import {DefaultTheme, DarkTheme} from '@react-navigation/native';
+import {AppTheme} from '../types';
 
 const colors = {
   transparent: 'transparent',
   white: '#fff',
   black: '#000',
-};
-
-type AppTheme = Theme & {
-  colors: Theme['colors'] & {
-    foreground: string;
-  };
 };
 
 const light: AppTheme = {
@@ -31,5 +26,4 @@ const dark: AppTheme = {
     foreground: '#FAFAFA',
   },
 };
-
-export {light, dark, colors};
+export {light, dark};

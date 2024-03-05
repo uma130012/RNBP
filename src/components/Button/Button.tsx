@@ -9,8 +9,9 @@ import {
   TouchableOpacityProps,
 } from 'react-native';
 import {fonts, ms} from '../../theme';
-import LabelText from '../Label/LabelText';
 import {useTheme} from '@react-navigation/native';
+import {LabelText} from '../label/LabelText';
+import {TColors} from '../../types';
 
 interface ButtonProps extends TouchableOpacityProps {
   title: string;
@@ -19,7 +20,7 @@ interface ButtonProps extends TouchableOpacityProps {
   outline?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({
+export const Button: React.FC<ButtonProps> = ({
   title,
   style,
   disabled,
@@ -54,9 +55,7 @@ const Button: React.FC<ButtonProps> = ({
   );
 };
 
-export default Button;
-
-const styling = (colors: any) =>
+const styling = (colors: TColors) =>
   StyleSheet.create({
     buttonStyle: {
       maxHeight: ms(44),

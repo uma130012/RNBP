@@ -1,14 +1,13 @@
 import {StyleSheet} from 'react-native';
 import {fonts, ms} from '../../../theme';
+import {TColors} from '../../../types';
 
-export const styling = (colors: any) =>
+export const styling = (colors: TColors) =>
   StyleSheet.create({
-    mainContainer: {flex: 1, backgroundColor: colors.background},
     container: {
       alignItems: 'center',
       justifyContent: 'center',
       flex: 1,
-      margin: 16,
     },
     logo: {height: ms(100), width: ms(100), tintColor: colors.foreground},
     mainTitle: {
@@ -23,6 +22,5 @@ export const styling = (colors: any) =>
     bottomContainer: {
       alignItems: 'center',
       justifyContent: 'center',
-      margin: 16,
     },
   });

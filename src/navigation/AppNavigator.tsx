@@ -3,28 +3,28 @@
  * @ Author: Uma <uma.shankar@antiersolutions.com>
  * @ Create Time: 2024-03-01 12:53:51
  * @ Modified by: Uma
- * @ Modified time: 2024-03-05 10:25:14
+ * @ Modified time: 2024-03-05 12:18:29
  * @ Description:
  */
 
-import {
-  NavigationContainer,
-  Theme,
-  createNavigationContainerRef,
-} from '@react-navigation/native';
+import {NavigationContainer, Theme} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React, {PropsWithoutRef} from 'react';
 import {ForgotPassword, Login, OTP, Routes, SignUp, Welcome} from '../screens';
+import {navigationRef} from './index';
+import {TabNavigator} from './TabNavigator';
 
 const Stack = createNativeStackNavigator();
-export const navigationRef = createNavigationContainerRef();
 
-const AppNavigator: React.FC<PropsWithoutRef<{theme: Theme}>> = ({theme}) => {
+export const AppNavigator: React.FC<PropsWithoutRef<{theme: Theme}>> = ({
+  theme,
+}) => {
   return (
     <NavigationContainer ref={navigationRef} theme={theme}>
       <Stack.Navigator
         screenOptions={{headerShown: false}}
-        initialRouteName={Routes.welcome}>
+        initialRouteName="TabNavigator">
+        <Stack.Screen name="TabNavigator" component={TabNavigator} />
         <Stack.Screen name={Routes.welcome} component={Welcome} />
         <Stack.Screen name={Routes.login} component={Login} />
         <Stack.Screen name={Routes.signUp} component={SignUp} />
@@ -34,5 +34,3 @@ const AppNavigator: React.FC<PropsWithoutRef<{theme: Theme}>> = ({theme}) => {
     </NavigationContainer>
   );
 };
-
-export default AppNavigator;

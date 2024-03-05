@@ -3,17 +3,16 @@
  * @ Author: Uma <uma.shankar@antiersolutions.com>
  * @ Create Time: 2024-03-01 12:56:26
  * @ Modified by: Uma
- * @ Modified time: 2024-03-05 10:25:28
+ * @ Modified time: 2024-03-05 13:23:46
  * @ Description:
  */
 
 import {useColorScheme} from 'react-native';
-import AuthNavigator from './AuthNavigator';
-import AppNavigator from './AppNavigator';
-
 import {dark, light} from '../theme';
 import {shallowEqual, useSelector} from 'react-redux';
 import {RootState} from '../redux/store/store';
+import {AppNavigator} from './AppNavigator';
+import {AuthNavigator} from './AuthNavigator';
 
 export function Router() {
   const scheme = useColorScheme();
