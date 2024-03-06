@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Image, TextInput, TouchableOpacity, View} from 'react-native';
 import {InputFieldProps} from '.';
 import {LabelText} from '../label/LabelText';
@@ -17,14 +17,24 @@ const InputField = (props: InputFieldProps) => {
     onPressRightIcon,
     errorTextStyle,
     leftLineStyle,
+    activeBorderColor = '#000',
+    inActiveBorderColor = '#d8d8d8',
     style,
-    value,
+    field: {name, onBlur, onChange, value},
+    form: {errors, touched, setFieldTouched},
     ...rest
   } = props;
+  const hasError = errors[name] && touched[name];
+  const [inputFocused, setInputFocused] = useState(false);
   return (
     <View style={[styles.inputMainContainer, containerStyle]}>
       <LabelText style={[styles.labeText, labelStyle]}>{labelText}</LabelText>
-      <View style={[styles.outerInput, outerInputStyle]}>
+      <View
+        style={[
+          styles.outerInput,
+          outerInputStyle,
+          {borderColor: inputFocused ? activeBorderColor : inActiveBorderColor},
+        ]}>
         {leftIcon && (
           <View style={styles.leftIconContainerStyle}>
             <Image
@@ -34,7 +44,18 @@ const InputField = (props: InputFieldProps) => {
             <View style={[styles.leftLineStyle, leftLineStyle]} />
           </View>
         )}
-        <TextInput style={[styles.inputStyle, style]} value={value} {...rest} />
+        <TextInput
+          style={[styles.inputStyle, style]}
+          value={value}
+          onChangeText={text => onChange(name)(text)}
+          onBlur={() => {
+            setFieldTouched(name);
+            onBlur(name);
+          }}
+          onFocus={() => setInputFocused(true)}
+          onEndEditing={() => setInputFocused(false)}
+          {...rest}
+        />
 
         {rightIcon && (
           <TouchableOpacity onPress={onPressRightIcon}>
@@ -45,6 +66,11 @@ const InputField = (props: InputFieldProps) => {
           </TouchableOpacity>
         )}
       </View>
+      {hasError && (
+        <LabelText style={[styles.errorTextStyle, errorTextStyle]}>
+          {errors[name]}
+        </LabelText>
+      )}
     </View>
   );
 };

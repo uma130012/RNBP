@@ -7,4 +7,9 @@ export const images = Object.freeze({
     profile: require('../assets/images/tabIcons/profile.png'),
     wallet: require('../assets/images/tabIcons/wallet.png'),
   },
+  loginIcons: {
+    email: require('../assets/images/login/email.png'),
+    eye: require('../assets/images/login/eye.png'),
+    hiddenEye: require('../assets/images/login/hiddenEye.png'),
+  },
 });

@@ -7,8 +7,14 @@ import {
   TextStyle,
   ViewStyle,
 } from 'react-native';
+import {FormikProps, FieldInputProps} from 'formik';
 
-interface InputFieldProps extends TextInputProps {
+interface FormikInputProps {
+  field: FieldInputProps;
+  form: FormikProps;
+}
+
+interface InputFieldProps extends TextInputProps, FormikInputProps {
   containerStyle?: StyleProp<ViewStyle>;
   outerInputStyle?: StyleProp<ViewStyle>;
   labelText?: string;
@@ -20,6 +26,8 @@ interface InputFieldProps extends TextInputProps {
   onPressRightIcon?: () => void;
   errorTextStyle?: StyleProp<TextStyle>;
   leftLineStyle?: StyleProp<ViewStyle>;
+  activeBorderColor?: string;
+  inActiveBorderColor?: string;
 }
 
-export {InputFieldProps};
+export {InputFieldProps, FormikInputProps};
