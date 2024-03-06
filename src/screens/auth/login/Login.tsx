@@ -10,6 +10,7 @@ import {loginValidationSchema} from './helper';
 import {AppDispatch} from '../../../redux/store/store';
 import {useDispatch} from 'react-redux';
 import {setLogin} from '../../../redux/slices';
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 
 export function Login() {
   const {colors}: AppTheme = useTheme();
@@ -18,65 +19,69 @@ export function Login() {
   const dispatch = useDispatch<AppDispatch>();
   return (
     <Container colors={colors}>
-      <Formik
-        initialValues={{
-          email: '',
-          password: '',
-        }}
-        validationSchema={loginValidationSchema}
-        onSubmit={values => {
-          console.log(values);
-          dispatch(setLogin(true));
-        }}>
-        {({handleSubmit, isValid}) => (
-          <View>
-            <Field
-              component={InputField}
-              name="email"
-              placeholder="eg 'Admin@gmail.com'"
-              labelText="Email Address"
-              labelStyle={styles.labelTextStyle}
-              leftIcon={images.loginIcons.email}
-              leftIconStyle={styles.iconTint}
-              keyboardType="email-address"
-              style={styles.inputStyle}
-              outerInputStyle={styles.outerInputStyle}
-              activeBorderColor={colors.foreground}
-              inActiveBorderColor={colors.border}
-            />
-            <Field
-              component={InputField}
-              name="password"
-              placeholder="Password"
-              labelText="Password"
-              labelStyle={styles.labelTextStyle}
-              leftIcon={images.tabIcons.profile}
-              leftIconStyle={styles.iconTint}
-              rightIcon={
-                isShowPassword
-                  ? images.loginIcons.eye
-                  : images.loginIcons.hiddenEye
-              }
-              rightIconStyle={styles.iconTint}
-              secureTextEntry={isShowPassword}
-              onPressRightIcon={() => {
-                setIsShowPassword(!isShowPassword);
-              }}
-              style={styles.inputStyle}
-              outerInputStyle={styles.outerInputStyle}
-              activeBorderColor={colors.foreground}
-              inActiveBorderColor={colors.border}
-            />
-            <Button
-              onPress={() => {
-                handleSubmit();
-              }}
-              title="Login"
-              disabled={!isValid}
-            />
-          </View>
-        )}
-      </Formik>
+      <KeyboardAwareScrollView
+        keyboardShouldPersistTaps="handled"
+        showsVerticalScrollIndicator={false}>
+        <Formik
+          initialValues={{
+            email: '',
+            password: '',
+          }}
+          validationSchema={loginValidationSchema}
+          onSubmit={values => {
+            console.log(values);
+            dispatch(setLogin(true));
+          }}>
+          {({handleSubmit, isValid}) => (
+            <View>
+              <Field
+                component={InputField}
+                name="email"
+                placeholder="eg 'Admin@gmail.com'"
+                labelText="Email Address"
+                labelStyle={styles.labelTextStyle}
+                leftIcon={images.loginIcons.email}
+                leftIconStyle={styles.iconTint}
+                keyboardType="email-address"
+                style={styles.inputStyle}
+                outerInputStyle={styles.outerInputStyle}
+                activeBorderColor={colors.foreground}
+                inActiveBorderColor={colors.border}
+              />
+              <Field
+                component={InputField}
+                name="password"
+                placeholder="Password"
+                labelText="Password"
+                labelStyle={styles.labelTextStyle}
+                leftIcon={images.tabIcons.profile}
+                leftIconStyle={styles.iconTint}
+                rightIcon={
+                  isShowPassword
+                    ? images.loginIcons.eye
+                    : images.loginIcons.hiddenEye
+                }
+                rightIconStyle={styles.iconTint}
+                secureTextEntry={isShowPassword}
+                onPressRightIcon={() => {
+                  setIsShowPassword(!isShowPassword);
+                }}
+                style={styles.inputStyle}
+                outerInputStyle={styles.outerInputStyle}
+                activeBorderColor={colors.foreground}
+                inActiveBorderColor={colors.border}
+              />
+              <Button
+                onPress={() => {
+                  handleSubmit();
+                }}
+                title="Login"
+                disabled={!isValid}
+              />
+            </View>
+          )}
+        </Formik>
+      </KeyboardAwareScrollView>
     </Container>
   );
 }
