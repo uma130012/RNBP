@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 import {fonts, ms} from '../../theme';
 import {TColors} from '../../types';
 
-export const controllerStyle = (colors: TColors) =>
+export const containerStyle = (colors: TColors) =>
   StyleSheet.create({
     mainContainer: {flex: 1, backgroundColor: colors.background},
     container: {

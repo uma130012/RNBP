@@ -3,7 +3,7 @@
  * @ Author: Uma <uma.shankar@antiersolutions.com>
  * @ Create Time: 2024-03-05 11:11:39
  * @ Modified by: Uma
- * @ Modified time: 2024-03-06 10:11:52
+ * @ Modified time: 2024-03-06 10:52:29
  * @ Description:
  */
 
@@ -11,9 +11,9 @@ import {useTheme} from '@react-navigation/native';
 import React from 'react';
 import {
   Button,
-  Controller,
+  Container,
   LabelText,
-  controllerStyle,
+  containerStyle,
 } from '../../../components';
 import {View} from 'react-native';
 import {AppTheme} from '../../../types';
@@ -22,10 +22,10 @@ import {useTranslation} from 'react-i18next';
 
 export function Profile() {
   const {colors}: AppTheme = useTheme();
-  const styles = controllerStyle(colors);
+  const styles = containerStyle(colors);
   const {t} = useTranslation();
   return (
-    <Controller colors={colors}>
+    <Container colors={colors}>
       <View style={styles.childContainer}>
         <LabelText style={styles.mainTitle}>{t('tabs.profile')}</LabelText>
         <Button
@@ -36,6 +36,6 @@ export function Profile() {
           }}
         />
       </View>
-    </Controller>
+    </Container>
   );
 }

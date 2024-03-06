@@ -3,19 +3,15 @@
  * @ Author: Uma <uma.shankar@antiersolutions.com>
  * @ Create Time: 2024-03-01 12:55:30
  * @ Modified by: Uma
- * @ Modified time: 2024-03-05 11:38:13
+ * @ Modified time: 2024-03-06 10:34:03
  * @ Description:
  */
 
-import {
-  NavigationContainer,
-  Theme,
-  createNavigationContainerRef,
-} from '@react-navigation/native';
+import {NavigationContainer, Theme} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React, {PropsWithoutRef} from 'react';
-import {ForgotPassword, Login, OTP, Routes, SignUp, Welcome} from '../screens';
 import {navigationRef} from '.';
+import {ForgotPassword, Login, OTP, Routes, SignUp, Welcome} from '../screens';
 
 const Stack = createNativeStackNavigator();
 

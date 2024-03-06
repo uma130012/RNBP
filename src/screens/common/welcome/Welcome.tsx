@@ -1,23 +1,26 @@
-import {useTheme} from '@react-navigation/native';
+import {ParamListBase, useNavigation, useTheme} from '@react-navigation/native';
 import React from 'react';
 import {Image, View} from 'react-native';
 
 import {images} from '../../../theme';
 import {styling} from './style';
-import {Button, Controller, LabelText} from '../../../components';
+import {Button, Container, LabelText} from '../../../components';
 import {useDispatch} from 'react-redux';
 import {AppDispatch} from '../../../redux/store/store';
 import {setLogin} from '../../../redux/slices/user';
 import {AppTheme} from '../../../types';
 import {useTranslation} from 'react-i18next';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {Routes} from '../../routes';
 
 export function Welcome() {
   const {colors}: AppTheme = useTheme();
   const styles = styling(colors);
   const dispatch = useDispatch<AppDispatch>();
   const {t} = useTranslation();
+  const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
   return (
-    <Controller colors={colors}>
+    <Container colors={colors}>
       <View style={styles.container}>
         <Image source={images.react_native_logo} style={styles.logo} />
         <LabelText style={styles.mainTitle}>{t('splash.welcome')}</LabelText>
@@ -31,8 +34,14 @@ export function Welcome() {
             dispatch(setLogin(true));
           }}
         />
-        <Button title={t('splash.createAccount')} style={{marginTop: 16}} />
+        <Button
+          title={t('splash.createAccount')}
+          style={{marginTop: 16}}
+          onPress={() => {
+            navigation.navigate(Routes.login);
+          }}
+        />
       </View>
-    </Controller>
+    </Container>
   );
 }
