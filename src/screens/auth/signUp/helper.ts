@@ -1,7 +1,11 @@
 import * as yup from 'yup';
 import {Regex} from '../../../utils';
 
-const loginValidationSchema = yup.object().shape({
+const signUpValidationSchema = yup.object().shape({
+  fullName: yup
+    .string()
+    .matches(/(\w.+\s).+/, 'Enter at least 2 names')
+    .required('Full name is required'),
   email: yup
     .string()
     .email('Please enter valid email')
@@ -19,6 +23,10 @@ const loginValidationSchema = yup.object().shape({
     .matches(/^\S*$/, 'Passwords should not include white spaces')
     .min(8, ({min}) => `Password must be at least ${min} characters`)
     .required('Password is required'),
+  confirmPassword: yup
+    .string()
+    .oneOf([yup.ref('password')], 'Passwords do not match')
+    .required('Confirm password is required'),
 });
 
-export {loginValidationSchema};
+export {signUpValidationSchema};
