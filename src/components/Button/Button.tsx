@@ -11,7 +11,7 @@ import {
 import {fonts, ms} from '../../theme';
 import {useTheme} from '@react-navigation/native';
 import {LabelText} from '../label/LabelText';
-import {TColors} from '../../types';
+import {AppTheme, TColors} from '../../types';
 
 interface ButtonProps extends TouchableOpacityProps {
   title: string;
@@ -29,7 +29,7 @@ export const Button: React.FC<ButtonProps> = ({
   outline = false,
   ...rest
 }) => {
-  const {colors} = useTheme();
+  const {colors}: AppTheme = useTheme();
   const styles = styling(colors);
   return (
     <TouchableOpacity

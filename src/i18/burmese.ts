@@ -3,11 +3,11 @@
  * @ Author: Uma <uma.shankar@antiersolutions.com>
  * @ Create Time: 2024-03-01 12:19:38
  * @ Modified by: Uma
- * @ Modified time: 2024-03-05 18:16:34
+ * @ Modified time: 2024-03-06 10:10:26
  * @ Description:
  */
 
-export const Burmese = {
+export const Burmese = Object.freeze({
   splash: {
     welcome: 'ရေကြည်',
     subHeading:
@@ -42,4 +42,4 @@ export const Burmese = {
     txn: 'ငွေလွှဲခြင်း။',
     profile: 'ကိုယ်ရေးအကျဉ်း',
   },
-};
+});

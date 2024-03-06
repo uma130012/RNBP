@@ -1,11 +1,11 @@
 import {DefaultTheme, DarkTheme} from '@react-navigation/native';
 import {AppTheme} from '../types';
 
-const colors = {
+const colors = Object.freeze({
   transparent: 'transparent',
   white: '#fff',
   black: '#000',
-};
+});
 
 const light: AppTheme = {
   dark: false,

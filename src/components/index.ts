@@ -1,4 +1,4 @@
-export * from './controller/Controller';
-export * from './controller/style';
+export * from './container/Container';
+export * from './container/style';
 export * from './button/Button';
 export * from './label/LabelText';

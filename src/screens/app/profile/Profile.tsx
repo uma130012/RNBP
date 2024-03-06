@@ -3,7 +3,7 @@
  * @ Author: Uma <uma.shankar@antiersolutions.com>
  * @ Create Time: 2024-03-05 11:11:39
  * @ Modified by: Uma
- * @ Modified time: 2024-03-05 18:07:27
+ * @ Modified time: 2024-03-06 10:11:52
  * @ Description:
  */
 
@@ -17,7 +17,7 @@ import {
 } from '../../../components';
 import {View} from 'react-native';
 import {AppTheme} from '../../../types';
-import {resetReduxPersistData} from '../../../redux/reset/resetRedux';
+import {resetReduxPersistData} from '../../../redux/reset';
 import {useTranslation} from 'react-i18next';
 
 export function Profile() {

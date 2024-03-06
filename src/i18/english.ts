@@ -3,11 +3,11 @@
  * @ Author: Uma <uma.shankar@antiersolutions.com>
  * @ Create Time: 2024-03-01 12:19:12
  * @ Modified by: Uma
- * @ Modified time: 2024-03-05 18:16:30
+ * @ Modified time: 2024-03-06 10:10:08
  * @ Description:
  */
 
-export const English = {
+export const English = Object.freeze({
   splash: {
     welcome: 'WELCOME',
     subHeading: 'Sign up to buy, sell and manage your cryptocurrency',
@@ -41,4 +41,4 @@ export const English = {
     txn: 'Transaction',
     profile: 'Profile',
   },
-};
+});

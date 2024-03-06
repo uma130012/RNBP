@@ -1,4 +1,4 @@
-export const images = {
+export const images = Object.freeze({
   react_native_logo: require('../assets/images/react_native_logo.png'),
   tabIcons: {
     home: require('../assets/images/tabIcons/dashboard.png'),
@@ -7,4 +7,4 @@ export const images = {
     profile: require('../assets/images/tabIcons/profile.png'),
     wallet: require('../assets/images/tabIcons/wallet.png'),
   },
-};
+});

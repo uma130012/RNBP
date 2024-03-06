@@ -3,7 +3,7 @@
  * @ Author: Uma <uma.shankar@antiersolutions.com>
  * @ Create Time: 2024-03-04 18:24:10
  * @ Modified by: Uma
- * @ Modified time: 2024-03-05 10:24:20
+ * @ Modified time: 2024-03-06 10:04:08
  * @ Description:
  */
 
@@ -24,4 +24,4 @@ const userSlice = createSlice({
 });
 
 export const {setLogin} = userSlice.actions;
-export default userSlice.reducer;
+export const userReducer = userSlice.reducer;

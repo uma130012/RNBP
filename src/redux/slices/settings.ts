@@ -1,7 +1,7 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 const initialState = {
-  selectedLanguage: 'bu',
+  selectedLanguage: 'en',
 };
 const settingsSlice = createSlice({
   name: 'settings',
@@ -14,4 +14,4 @@ const settingsSlice = createSlice({
 });
 
 export const {setSelectedLanguage} = settingsSlice.actions;
-export default settingsSlice.reducer;
+export const settingsReducer = settingsSlice.reducer;
