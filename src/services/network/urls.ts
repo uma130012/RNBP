@@ -1,1 +1,3 @@
-export const Urls = Object.freeze({});
+export const Urls = Object.freeze({
+  baseUrl: '',
+});
