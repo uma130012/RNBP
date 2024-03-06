@@ -1,18 +1,18 @@
 import {ParamListBase, useNavigation, useTheme} from '@react-navigation/native';
+import {StackNavigationProp} from '@react-navigation/stack';
 import {Field, Formik} from 'formik';
 import React, {useState} from 'react';
 import {View} from 'react-native';
-import {Button, Container, InputField, LabelText} from '../../../components';
-import {fonts, images, ms} from '../../../theme';
-import {AppTheme} from '../../../types';
-import {styling} from './style';
-import {loginValidationSchema} from './helper';
-import {AppDispatch} from '../../../redux/store/store';
-import {useDispatch} from 'react-redux';
-import {setLogin} from '../../../redux/slices';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
-import {StackNavigationProp} from '@react-navigation/stack';
+import {useDispatch} from 'react-redux';
+import {Button, Container, InputField, LabelText} from '../../../components';
+import {setLogin} from '../../../redux/slices';
+import {AppDispatch} from '../../../redux/store/store';
+import {images} from '../../../theme';
+import {AppTheme} from '../../../types';
 import {Routes} from '../../routes';
+import {loginValidationSchema} from './helper';
+import {styling} from './style';
 
 export function Login() {
   const {colors}: AppTheme = useTheme();
