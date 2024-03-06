@@ -1,9 +1,9 @@
-import {useTheme} from '@react-navigation/native';
+import {ParamListBase, useNavigation, useTheme} from '@react-navigation/native';
 import {Field, Formik} from 'formik';
 import React, {useState} from 'react';
 import {View} from 'react-native';
-import {Button, Container, InputField} from '../../../components';
-import {images} from '../../../theme';
+import {Button, Container, InputField, LabelText} from '../../../components';
+import {fonts, images, ms} from '../../../theme';
 import {AppTheme} from '../../../types';
 import {styling} from './style';
 import {loginValidationSchema} from './helper';
@@ -11,17 +11,24 @@ import {AppDispatch} from '../../../redux/store/store';
 import {useDispatch} from 'react-redux';
 import {setLogin} from '../../../redux/slices';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {Routes} from '../../routes';
 
 export function Login() {
   const {colors}: AppTheme = useTheme();
   const styles = styling(colors);
   const [isShowPassword, setIsShowPassword] = useState<boolean>(true);
   const dispatch = useDispatch<AppDispatch>();
+  const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
   return (
     <Container colors={colors}>
       <KeyboardAwareScrollView
         keyboardShouldPersistTaps="handled"
         showsVerticalScrollIndicator={false}>
+        <LabelText style={styles.headerTitle}>Welcome Back !!</LabelText>
+        <LabelText style={styles.subHeaderTitle}>
+          Please login to continue
+        </LabelText>
         <Formik
           initialValues={{
             email: '',
@@ -71,6 +78,13 @@ export function Login() {
                 activeBorderColor={colors.foreground}
                 inActiveBorderColor={colors.border}
               />
+              <LabelText
+                style={styles.forgetPasswordText}
+                onPress={() => {
+                  navigation.navigate(Routes.forgotPassword);
+                }}>
+                Forgot password?
+              </LabelText>
               <Button
                 onPress={() => {
                   handleSubmit();

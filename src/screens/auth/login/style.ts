@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {TColors} from '../../../types';
+import {fonts, ms} from '../../../theme';
 
 export const styling = (colors: TColors) =>
   StyleSheet.create({
@@ -16,5 +17,24 @@ export const styling = (colors: TColors) =>
 
     inputStyle: {
       color: colors.text,
+    },
+
+    headerTitle: {
+      fontFamily: fonts.bold,
+      fontSize: ms(24),
+      color: colors.text,
+    },
+    subHeaderTitle: {
+      fontFamily: fonts.medium,
+      fontSize: ms(14),
+      marginBottom: ms(20),
+      color: colors.text,
+    },
+    forgetPasswordText: {
+      fontFamily: fonts.medium,
+      fontSize: ms(14),
+      marginBottom: ms(20),
+      color: colors.text,
+      textAlign: 'right',
     },
   });
