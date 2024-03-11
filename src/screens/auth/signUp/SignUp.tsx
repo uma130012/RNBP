@@ -45,7 +45,7 @@ export function SignUp() {
                 placeholder="eg 'John'"
                 labelText="Full Name"
                 labelStyle={styles.labelTextStyle}
-                leftIcon={images.loginIcons.email}
+                leftIcon={images.tabIcons.profile}
                 leftIconStyle={styles.iconTint}
                 style={styles.inputStyle}
                 outerInputStyle={styles.outerInputStyle}
@@ -58,7 +58,7 @@ export function SignUp() {
                 placeholder="eg 'Admin@gmail.com'"
                 labelText="Email Address"
                 labelStyle={styles.labelTextStyle}
-                leftIcon={images.loginIcons.email}
+                leftIcon={images.onboard.email}
                 leftIconStyle={styles.iconTint}
                 keyboardType="email-address"
                 style={styles.inputStyle}
@@ -72,12 +72,10 @@ export function SignUp() {
                 placeholder="Password"
                 labelText="Password"
                 labelStyle={styles.labelTextStyle}
-                leftIcon={images.tabIcons.profile}
+                leftIcon={images.onboard.padlock}
                 leftIconStyle={styles.iconTint}
                 rightIcon={
-                  isShowPassword
-                    ? images.loginIcons.eye
-                    : images.loginIcons.hiddenEye
+                  isShowPassword ? images.onboard.eye : images.onboard.hiddenEye
                 }
                 rightIconStyle={styles.iconTint}
                 secureTextEntry={isShowPassword}
@@ -95,12 +93,12 @@ export function SignUp() {
                 placeholder="Confirm Password"
                 labelText="Confirm Password"
                 labelStyle={styles.labelTextStyle}
-                leftIcon={images.tabIcons.profile}
+                leftIcon={images.onboard.padlock}
                 leftIconStyle={styles.iconTint}
                 rightIcon={
                   isShowConfirmPassword
-                    ? images.loginIcons.eye
-                    : images.loginIcons.hiddenEye
+                    ? images.onboard.eye
+                    : images.onboard.hiddenEye
                 }
                 rightIconStyle={styles.iconTint}
                 secureTextEntry={isShowPassword}

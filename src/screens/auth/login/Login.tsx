@@ -47,7 +47,7 @@ export function Login() {
                 placeholder="eg 'Admin@gmail.com'"
                 labelText="Email Address"
                 labelStyle={styles.labelTextStyle}
-                leftIcon={images.loginIcons.email}
+                leftIcon={images.onboard.email}
                 leftIconStyle={styles.iconTint}
                 keyboardType="email-address"
                 style={styles.inputStyle}
@@ -61,12 +61,10 @@ export function Login() {
                 placeholder="Password"
                 labelText="Password"
                 labelStyle={styles.labelTextStyle}
-                leftIcon={images.tabIcons.profile}
+                leftIcon={images.onboard.padlock}
                 leftIconStyle={styles.iconTint}
                 rightIcon={
-                  isShowPassword
-                    ? images.loginIcons.eye
-                    : images.loginIcons.hiddenEye
+                  isShowPassword ? images.onboard.eye : images.onboard.hiddenEye
                 }
                 rightIconStyle={styles.iconTint}
                 secureTextEntry={isShowPassword}
