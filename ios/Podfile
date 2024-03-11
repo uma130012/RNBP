@@ -45,6 +45,16 @@ target 'RNBP' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+  target 'RNBP-QA' do
+    inherit! :complete
+    # Pods for QA
+  end
+  
+  target 'RNBP-Stage' do
+    inherit! :complete
+    # Pods for Stage
+  end
+
   target 'RNBPTests' do
     inherit! :complete
     # Pods for testing

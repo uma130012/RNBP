@@ -9,17 +9,21 @@ import {images} from '../../../theme';
 import {AppTheme} from '../../../types';
 import {Routes} from '../../routes';
 import {styling} from './style';
+import Config from 'react-native-config';
 
 export function Welcome() {
   const {colors}: AppTheme = useTheme();
   const styles = styling(colors);
   const {t} = useTranslation();
   const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
+
+  console.log(Config.ENVS);
   return (
     <Container colors={colors}>
       <View style={styles.container}>
         <Image source={images.react_native_logo} style={styles.logo} />
         <LabelText style={styles.mainTitle}>{t('splash.welcome')}</LabelText>
+        <LabelText style={styles.mainTitle}>{Config.ENVS}</LabelText>
         <LabelText style={styles.subTitle}>{t('splash.subHeading')}</LabelText>
       </View>
       <View style={styles.bottomContainer}>

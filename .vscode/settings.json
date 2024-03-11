@@ -1,3 +1,11 @@
 {
-  "cSpell.words": ["Antier", "formik", "Keychain", "persistor", "reduxjs"]
+  "cSpell.words": [
+    "Antier",
+    "ENVFILE",
+    "formik",
+    "Keychain",
+    "persistor",
+    "reduxjs",
+    "RNBP"
+  ]
 }
