@@ -8,6 +8,7 @@ export const styling = (colors: TColors) =>
       flex: 1,
       alignItems: 'center',
       justifyContent: 'center',
+      backgroundColor: colors.background,
     },
     oopViewStyle: {
       alignItems: 'center',

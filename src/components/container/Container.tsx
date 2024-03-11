@@ -23,7 +23,11 @@ export function Container({children, colors}: ContainerProps) {
     <SafeAreaView style={styles.mainContainer}>
       <Loader isLoading={isLoading} />
       <View style={styles.container}>
-        {isConnected === false ? <InternetInfo /> : children}
+        {isConnected === false ? (
+          <InternetInfo isConnected={!isConnected} />
+        ) : (
+          children
+        )}
       </View>
     </SafeAreaView>
   );
