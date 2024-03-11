@@ -3,7 +3,7 @@
  * @ Author: Uma <uma.shankar@antiersolutions.com>
  * @ Create Time: 2024-03-01 12:19:38
  * @ Modified by: Uma
- * @ Modified time: 2024-03-06 10:10:26
+ * @ Modified time: 2024-03-11 10:42:19
  * @ Description:
  */
 
@@ -41,5 +41,12 @@ export const Burmese = Object.freeze({
     chart: 'ဇယား',
     txn: 'ငွေလွှဲခြင်း။',
     profile: 'ကိုယ်ရေးအကျဉ်း',
+  },
+  errors: {
+    noInternet: 'အင်တာနက်ချိတ်ဆက်မှုမတွေ့ပါ။',
+    checkConnection:
+      'သင်၏ အင်တာနက်ချိတ်ဆက်မှုကို စစ်ဆေးပြီးနောက် စာမျက်နှာကို ပြန်လည်စတင်ပါ။',
+    whoops: 'ရန်ကုန်မြို့တွင်း',
+    refresh: 'ပြန်လည်စတင်ပါ။',
   },
 });

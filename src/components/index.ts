@@ -4,3 +4,4 @@ export * from './button/Button';
 export * from './label/LabelText';
 export * from './input/InputField';
 export * from './loader/loader';
+export * from './internetInfo/InternetInfo';

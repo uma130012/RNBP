@@ -13,4 +13,7 @@ export const images = Object.freeze({
     hiddenEye: require('../assets/images/onboard/hiddenEye.png'),
     padlock: require('../assets/images/onboard/padlock.png'),
   },
+  common: {
+    internet_lost: require('../assets/images/common/internet_lost.png'),
+  },
 });

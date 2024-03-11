@@ -3,7 +3,7 @@
  * @ Author: Uma <uma.shankar@antiersolutions.com>
  * @ Create Time: 2024-03-01 12:19:12
  * @ Modified by: Uma
- * @ Modified time: 2024-03-06 10:10:08
+ * @ Modified time: 2024-03-11 10:41:27
  * @ Description:
  */
 
@@ -40,5 +40,11 @@ export const English = Object.freeze({
     chart: 'Chart',
     txn: 'Transaction',
     profile: 'Profile',
+  },
+  errors: {
+    noInternet: 'No Internet Connection found.',
+    checkConnection: 'Check Your Internet Connection, then refresh the page.',
+    whoops: 'Whoops',
+    refresh: 'Refresh',
   },
 });
