@@ -1,6 +1,14 @@
 apply plugin: "com.android.application"
 apply plugin: "com.facebook.react"
 
+ project.ext.envConfigFiles = [
+   prod: ".env.prod",
+   qa: ".env.qa",
+   stage: ".env.stage"
+ ]
+
+apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
+
 /**
  * This is the configuration block to customize your React Native Android app.
  * By default you don't need to apply any configuration, just uncomment the lines you need.
@@ -81,6 +89,31 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        stage {
+            minSdkVersion rootProject.ext.minSdkVersion
+            applicationId "com.rnbp.stage"
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            resValue "string", "build_config_package", "com.rnbp"
+        }
+        qa {
+            minSdkVersion rootProject.ext.minSdkVersion
+            applicationId "com.rnbp.qa"
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            resValue "string", "build_config_package", "com.rnbp"
+        }
+        prod {
+            minSdkVersion rootProject.ext.minSdkVersion
+            applicationId "com.rnbp"
+            targetSdkVersion rootProject.ext.targetSdkVersion
+            resValue "string", "build_config_package", "com.rnbp"
+        }
+        
+    }
+
     signingConfigs {
         debug {
             storeFile file('debug.keystore')

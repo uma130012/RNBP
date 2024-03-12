@@ -11,6 +11,9 @@
     "ios-qa": "react-native run-ios --scheme 'RNBP-QA'",
     "ios-stage": "react-native run-ios --scheme 'RNBP-Stage'",
     "ios-prod": "react-native run-ios --scheme 'RNBP'",
+    "android-stage": "react-native run-android --variant=stageDebug",
+    "android-qa": "react-native run-android --variant=qaDebug",
+    "android-prod": "react-native run-android --variant=prodDebug",
     "clean:ios": "cd ios && xcodebuild clean && cd ../",
     "clean:android": "cd android && ./gradlew clean && cd ../"
   },
