@@ -17,7 +17,7 @@ export function Welcome() {
   const {t} = useTranslation();
   const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
 
-  console.log(Config.ENVS);
+  console.log(Config);
   return (
     <Container colors={colors}>
       <View style={styles.container}>

@@ -8,12 +8,11 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "qa-env": "ENVFILE=.env.qa",
-    "stage-env": "ENVFILE=.env.stage",
-    "prod-env": "ENVFILE=.env.prod",
-    "ios-qa": "npm run qa-env && react-native run-ios --mode=Debug --scheme 'RNBP-QA'",
-    "ios-stage": "npm run stage-env && react-native run-ios --mode=Debug --scheme 'RNBP-Stage'",
-    "ios-prod": "npm run prod-env && react-native run-ios --mode=Debug --scheme 'RNBP'"
+    "ios-qa": "react-native run-ios --scheme 'RNBP-QA'",
+    "ios-stage": "react-native run-ios --scheme 'RNBP-Stage'",
+    "ios-prod": "react-native run-ios --scheme 'RNBP'",
+    "clean:ios": "cd ios && xcodebuild clean && cd ../",
+    "clean:android": "cd android && ./gradlew clean && cd ../"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.22.3",

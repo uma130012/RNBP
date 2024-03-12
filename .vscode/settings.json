@@ -3,9 +3,12 @@
     "Antier",
     "ENVFILE",
     "formik",
+    "gradlew",
     "Keychain",
     "persistor",
     "reduxjs",
-    "RNBP"
+    "RNBP",
+    "xattr",
+    "xcodebuild"
   ]
 }
