@@ -14,8 +14,18 @@
     "android-stage": "react-native run-android --variant=stageDebug",
     "android-qa": "react-native run-android --variant=qaDebug",
     "android-prod": "react-native run-android --variant=prodDebug",
+    "android-stage-release": "cd android && ./gradlew assembleStageRelease",
+    "android-qa-release": "cd android && ./gradlew assembleQaRelease",
+    "android-prod-release": "cd android && ./gradlew assembleProdRelease",
+    "android-stage-bundle": "cd android && ./gradlew bundleStageRelease",
+    "android-qa-bundle": "cd android && ./gradlew bundleQaRelease",
+    "android-prod-bundle": "cd android && ./gradlew bundleProdRelease",
+    "open-apk": "open ./android/app/build/outputs/apk/",
+    "open-bundle": "open ./android/app/build/outputs/bundle/",
     "clean:ios": "cd ios && xcodebuild clean && cd ../",
-    "clean:android": "cd android && ./gradlew clean && cd ../"
+    "clean:android": "cd android && ./gradlew clean && cd ../",
+    "kn": "killall node",
+    "adb-r": "adb reverse tcp:8081 tcp:8081"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.22.3",

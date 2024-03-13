@@ -5,6 +5,7 @@
     "formik",
     "gradlew",
     "Keychain",
+    "killall",
     "persistor",
     "reduxjs",
     "RNBP",
