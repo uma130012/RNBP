@@ -1,79 +1,148 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# React Native Boilerplate
 
-# Getting Started
+## Introduction
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+Welcome to the React Native Boilerplate! This boilerplate is designed to kickstart your React Native projects with a solid foundation, best practices, prebuilt screens like Welcome, Login, SignUp,OTP Forgot Password and Bottom TabBar, and commonly used libraries preconfigured.
 
-## Step 1: Start the Metro Server
+## Getting Started
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+### Prerequisites
 
-To start Metro, run the following command from the _root_ of your React Native project:
+Before you begin, make sure you have the following installed on your machine:
+
+[Node.js](https://nodejs.org/en)
+
+[npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
+
+### Installation
+
+#### 1. Clone the repository:
 
 ```bash
-# using npm
-npm start
-
-# OR using Yarn
-yarn start
+git clone https://github.com/uma130012/RNBP.git
 ```
 
-## Step 2: Start your Application
+> checkout from `main` branch
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+```bash
+git fetch --all
+git checkout origin/main
+```
 
-### For Android
+> for preconfigured `env` with multiple environments with **flavors** & **schema** then checkout from `env_config` branch
+
+```bash
+git checkout origin/env_config
+```
+
+#### 2. Navigate to the project directory:
+
+```bash
+cd RNBP
+```
+
+#### 3. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### Running the App
+
+#### For Android
 
 ```bash
 # using npm
 npm run android
 
-# OR using Yarn
-yarn android
+# for read env files with multiple flavors
+npm run android-stage
+npm run android-qa
+npm run android-prod
+
+# for release build with multiple flavors
+npm run android-stage-release
+npm run android-qa-release
+npm run android-prod-release
+
+# for release bundle build with multiple flavors
+npm run android-stage-bundle
+npm run android-qa-bundle
+npm run android-prod-bundle
+
 ```
 
-### For iOS
+#### For iOS
 
 ```bash
 # using npm
 npm run ios
 
-# OR using Yarn
-yarn ios
+# for read env files
+npm run ios-stage
+npm run ios-qa
+npm run ios-prod
+
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+> **Note**: For more command details check out the `package.json` scripts
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+## Project Structure
 
-## Step 3: Modifying your App
+The project structure follows a modular pattern for easy maintenance and scalability:
 
-Now that you have successfully run the app, let's modify it.
+- **src:** Contains the source code of the React Native application, and every folder contains barrel files `index.ts` to import different files from a unique path.
+  - **assets:** Images, fonts, and other static assets.
+  - **components:** Reusable UI components.
+  - **navigation:** Navigation setup and configurations.
+  - **screens:** App screens and their components, and every components folder contains:
+    - `screenName.tsx`: _The TypeScript file for the component._
+    - `model.d.ts`: _The file would typically define the expected structure and types of data that your application expects from the API._
+    - `style.ts`: _The styles for the component._
+    - `helper.ts`: _Any helper functions related to the component._
+  - **redux:** Redux store, actions, and reducers.
+  - **services:** Network services, Socket services.
+  - **hooks:** Custom React hooks for shared logic.
+  - **i18n:** Internationalization setup and language files.
+  - **theme:** Theme-related files for consistent styling.
+  - **types:** TypeScript type definitions.
+  - **utils:** General utility functions.
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+## Features
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+- **React Navigation:** Integrated navigation for a smooth user experience.
+- **Redux:** State management for your application. Built with `redux-persit`,`redux-saga`,`redux-toolkit`.
+- **Axios:** Configured HTTP client for making API requests.
+- **Formik & Yup:** Form handling with Formik for a simplified and efficient form development process, combined with Yup for schema validation.
+- **i18next:** Internationalization for supporting multiple languages.
+- **Keychain:** Securely manage and store sensitive information.
+- **Socket.io:** Real-time communication for interactive features.
+- **Appearance:** Automatically handle light and dark mode based on device appearance.
+- **React Native Config `.env`:** Manage different environments with multiple flavors & schema.
 
-## Congratulations! :tada:
+## Upcoming Features
 
-You've successfully run and modified your React Native App. :partying_face:
+- **Screenshot Prevention**
+- **Deep Linking**
+- **Code Obfuscation**
+- **Rooted/Jailbroken Device Detection**
+- **SSL Pinning**
+- **Codepush**:
 
-### Now what?
+## Authors
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+- [@uma130012](https://github.com/uma130012/RNBP)
 
-# Troubleshooting
+## Support
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+If you find this project helpful, please consider giving it a star on GitHub! ⭐
 
-# Learn More
+## Feedback
 
-To learn more about React Native, take a look at the following resources:
+If you have any feedback, please reach out to us at umashankarhajipur@gmail.com
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+## 🔗 Links
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/uma-s-b8b256155)
