@@ -5,7 +5,13 @@ import React, {useState} from 'react';
 import {View} from 'react-native';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {useDispatch} from 'react-redux';
-import {Button, Container, InputField, LabelText} from '../../../components';
+import {
+  Button,
+  Container,
+  InputField,
+  LabelText,
+  ToastMessage,
+} from '../../../components';
 import {setLogin} from '../../../redux/slices';
 import {AppDispatch} from '../../../redux/store/store';
 import {images} from '../../../theme';
@@ -38,6 +44,10 @@ export function Login() {
           onSubmit={values => {
             console.log(values);
             dispatch(setLogin(true));
+            ToastMessage({
+              title: 'Login',
+              message: 'Logged in successfully...!',
+            });
           }}>
           {({handleSubmit, isValid}) => (
             <View>

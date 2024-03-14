@@ -61,7 +61,7 @@ const handleStatusResponse = (response: AxiosResponse) => {
   // Show error message to the user if requested
   // Show error message to the user if requested
   if (data?.error === true) {
-    ToastMessage({type: 'error', message: data.message}); // You may need to adjust this based on your application's UI framework
+    ToastMessage({type: 'error', title: 'Error', message: data.message}); // You may need to adjust this based on your application's UI framework
   }
 
   // Switch based on HTTP status code

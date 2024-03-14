@@ -3,7 +3,7 @@
  * @ Author: Uma <uma.shankar@antiersolutions.com>
  * @ Create Time: 2024-03-05 11:11:39
  * @ Modified by: Uma
- * @ Modified time: 2024-03-06 10:52:29
+ * @ Modified time: 2024-03-14 15:59:30
  * @ Description:
  */
 
@@ -13,6 +13,7 @@ import {
   Button,
   Container,
   LabelText,
+  ToastMessage,
   containerStyle,
 } from '../../../components';
 import {View} from 'react-native';
@@ -33,6 +34,10 @@ export function Profile() {
           style={{width: '50%', alignSelf: 'center'}}
           onPress={() => {
             resetReduxPersistData();
+            ToastMessage({
+              title: 'Logout',
+              message: 'Logout successfully...!',
+            });
           }}
         />
       </View>
