@@ -5,3 +5,4 @@ export * from './label/LabelText';
 export * from './input/InputField';
 export * from './loader/loader';
 export * from './internetInfo/InternetInfo';
+export * from './toast/ToastMessage';

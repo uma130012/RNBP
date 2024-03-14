@@ -6,10 +6,11 @@ import axios, {
   Method,
   RawAxiosRequestHeaders,
 } from 'axios';
+import {ToastMessage} from '../../components';
 import {resetReduxPersistData} from '../../redux/reset';
-import {Urls} from './urls';
-import {store} from '../../redux/store/store';
 import {setLoading} from '../../redux/slices';
+import {store} from '../../redux/store/store';
+import {Urls} from './urls';
 
 /**
  * Enum representing different content types for HTTP requests.
@@ -60,7 +61,7 @@ const handleStatusResponse = (response: AxiosResponse) => {
   // Show error message to the user if requested
   // Show error message to the user if requested
   if (data?.error === true) {
-    // ToastMessage(data.message); // You may need to adjust this based on your application's UI framework
+    ToastMessage({type: 'error', message: data.message}); // You may need to adjust this based on your application's UI framework
   }
 
   // Switch based on HTTP status code
