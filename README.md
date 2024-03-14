@@ -120,6 +120,7 @@ The project structure follows a modular pattern for easy maintenance and scalabi
 - **Keychain:** Securely manage and store sensitive information.
 - **Socket.io:** Real-time communication for interactive features.
 - **Appearance:** Automatically handle light and dark mode based on device appearance.
+- **Internet Info:** Managing network connection.
 - **React Native Config `.env`:** Manage different environments with multiple flavors & schema.
 
 ## Upcoming Features
@@ -129,11 +130,11 @@ The project structure follows a modular pattern for easy maintenance and scalabi
 - **Code Obfuscation**
 - **Rooted/Jailbroken Device Detection**
 - **SSL Pinning**
-- **Codepush**:
+- **CodePush**:
 
 ## Authors
 
-- [@uma130012](https://github.com/uma130012/RNBP)
+- [Uma Shankar](https://github.com/uma130012/RNBP)
 
 ## Support
 
