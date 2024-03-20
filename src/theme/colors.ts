@@ -14,6 +14,7 @@ const light: AppTheme = {
     ...colors,
     background: '#FAFAFA',
     foreground: '#1A1A1A',
+    silverSand: '#c3c3c3',
   },
 };
 
@@ -24,6 +25,7 @@ const dark: AppTheme = {
     ...colors,
     background: '#1A1A1A',
     foreground: '#FAFAFA',
+    silverSand: '#3c3c3c', //blackOlive
   },
 };
 export {light, dark};

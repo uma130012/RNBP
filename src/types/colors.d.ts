@@ -9,4 +9,6 @@ export type TColors = {
   transparent: string;
   white: string;
   black: string;
+  silverSand: string;
+  blackOlive: string;
 };
