@@ -15,7 +15,7 @@ export const styling = (colors: TColors) =>
       color: colors.text,
     },
     dropdownContainerStyle: {
-      backgroundColor: colors.silverSand,
+      backgroundColor: colors.background,
       shadowColor: colors.foreground,
     },
   });

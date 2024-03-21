@@ -46,7 +46,7 @@ export const LanguageChanger = React.memo(() => {
         placeholderStyle={styles.textStyle}
         selectedTextStyle={styles.textStyle}
         dropdownContainerStyle={styles.dropdownContainerStyle}
-        activeColor={colors.background}
+        activeColor={colors.silverSand}
       />
     </View>
   );
