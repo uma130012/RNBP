@@ -1,16 +1,17 @@
-import {View, Text} from 'react-native';
-import React, {useState} from 'react';
-import {AppTheme} from '../../../types';
-import {useTheme} from '@react-navigation/native';
-import {useDispatch} from 'react-redux';
-import {AppDispatch} from '../../../redux/store/store';
-import {styling} from './style';
-import {Button, Container, InputField} from '../../../components';
-import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import {ParamListBase, useNavigation, useTheme} from '@react-navigation/native';
+import {StackNavigationProp} from '@react-navigation/stack';
 import {Field, Formik} from 'formik';
-import {setLogin} from '../../../redux/slices';
+import React, {useState} from 'react';
+import {View} from 'react-native';
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import {useDispatch} from 'react-redux';
+import {Button, Container, InputField} from '../../../components';
+import {AppDispatch} from '../../../redux/store/store';
 import {images} from '../../../theme';
+import {AppTheme} from '../../../types';
+import {Routes} from '../../routes';
 import {signUpValidationSchema} from './helper';
+import {styling} from './style';
 
 export function SignUp() {
   const {colors}: AppTheme = useTheme();
@@ -18,8 +19,7 @@ export function SignUp() {
   const [isShowPassword, setIsShowPassword] = useState<boolean>(true);
   const [isShowConfirmPassword, setIsShowConfirmPassword] =
     useState<boolean>(true);
-  const dispatch = useDispatch<AppDispatch>();
-
+  const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
   return (
     <Container colors={colors}>
       <KeyboardAwareScrollView
@@ -35,7 +35,7 @@ export function SignUp() {
           validationSchema={signUpValidationSchema}
           onSubmit={values => {
             console.log(values);
-            dispatch(setLogin(true));
+            navigation.navigate(Routes.otp);
           }}>
           {({handleSubmit, isValid}) => (
             <View>
