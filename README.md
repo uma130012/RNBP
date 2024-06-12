@@ -76,6 +76,12 @@ npm run android-prod-bundle
 
 #### For iOS
 
+> **INFO** :- If you are having trouble with iOS, try to reinstall the dependencies by running:
+
+1. `cd ios` to navigate to the `ios` folder.
+2. `bundle install` to install `Bundler`
+3. `bundle exec pod install` to install the iOS dependencies managed by CocoaPods.
+
 ```bash
 # using npm
 npm run ios
