@@ -1,10 +1,15 @@
 {
   "cSpell.words": [
     "Antier",
+    "ENVFILE",
     "formik",
-    "Jailbroken",
+    "gradlew",
     "Keychain",
+    "killall",
     "persistor",
-    "reduxjs"
+    "reduxjs",
+    "RNBP",
+    "xattr",
+    "xcodebuild"
   ]
 }
