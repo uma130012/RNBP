@@ -1,8 +1,12 @@
+
 # 🚀 React Native Boilerplate
 
 ## 👋 Introduction
 
 Welcome to the **React Native Boilerplate!** This boilerplate is designed to kickstart your React Native projects with a solid foundation, best practices, and prebuilt screens such as **Welcome, Login, SignUp, OTP, Forgot Password, and Bottom TabBar**. It also comes with commonly used libraries preconfigured for seamless development.
+
+![Simulator Screen Recording - iPhone 15 - 2025-04-22 at 22 00 58](https://github.com/user-attachments/assets/6d27ad84-ae3e-44ad-8985-091c615be1a9)
+![Simulator Screen Recording - iPhone 15 - 2025-04-22 at 21 56 11](https://github.com/user-attachments/assets/8f2faa1c-1e6e-4bab-bcda-fb2f3488a06e)
 
 ## 🛠 Getting Started
 
