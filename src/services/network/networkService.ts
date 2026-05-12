@@ -140,7 +140,7 @@ export const makeApiRequest = async ({
   isMultipart = false,
 }: RequestParams) => {
   const headers = configHeader(isMultipart);
-  isLoader && store.dispatch(setLoading(true));
+  if (isLoader) store.dispatch(setLoading(true));
   const requestConfig: AxiosRequestConfig = {
     url,
     method,
@@ -151,13 +151,14 @@ export const makeApiRequest = async ({
   };
   return await axios(requestConfig)
     .then(response => {
-      isLoader && store.dispatch(setLoading(false));
       handleStatusResponse(response);
       return response.data;
     })
     .catch(error => {
-      isLoader && store.dispatch(setLoading(false));
       handleApiError(error);
       return error;
+    })
+    .finally(() => {
+      if (isLoader) store.dispatch(setLoading(false));
     });
 };

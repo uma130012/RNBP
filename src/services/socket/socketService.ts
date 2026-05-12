@@ -9,7 +9,7 @@ As a bonus of that approach is that you can add any variable or logic to the clo
 
 /*REFERENCE-:- https://dev.to/sakhnyuk/how-to-implement-singleton-in-javascript-18o */
 
-const SocketManager = (() => {
+const SocketService = (() => {
   let instance: any = null;
 
   return class SocketManager {
@@ -70,4 +70,4 @@ const SocketManager = (() => {
   };
 })();
 
-export const SocketManagerInstance = new SocketManager();
+export const SocketServiceInstance = new SocketService();
