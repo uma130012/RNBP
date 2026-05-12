@@ -1,20 +1,24 @@
-# React Native Boilerplate
 
-## Introduction
+# 🚀 React Native Boilerplate
 
-Welcome to the React Native Boilerplate! This boilerplate is designed to kickstart your React Native projects with a solid foundation, best practices, prebuilt screens like Welcome, Login, SignUp,OTP Forgot Password and Bottom TabBar, and commonly used libraries preconfigured.
+## 👋 Introduction
 
-## Getting Started
+Welcome to the **React Native Boilerplate!** This boilerplate is designed to kickstart your React Native projects with a solid foundation, best practices, and prebuilt screens such as **Welcome, Login, SignUp, OTP, Forgot Password, and Bottom TabBar**. It also comes with commonly used libraries preconfigured for seamless development.
 
-### Prerequisites
+![Simulator Screen Recording - iPhone 15 - 2025-04-22 at 22 00 58](https://github.com/user-attachments/assets/6d27ad84-ae3e-44ad-8985-091c615be1a9)
+![Simulator Screen Recording - iPhone 15 - 2025-04-22 at 21 56 11](https://github.com/user-attachments/assets/8f2faa1c-1e6e-4bab-bcda-fb2f3488a06e)
 
-Before you begin, make sure you have the following installed on your machine:
+## 🛠 Getting Started
+
+### ⚙️ Prerequisites
+
+Before you begin, make sure you have the following tools installed on your machine:
 
 [Node.js](https://nodejs.org/en)
 
 [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
 
-### Installation
+### 💻 Installation
 
 #### 1. Clone the repository:
 
@@ -29,7 +33,7 @@ git fetch --all
 git checkout origin/main
 ```
 
-> for preconfigured `env` with multiple environments with **flavors** & **schema** then checkout from `env_config` branch
+> If you need preconfigured environments with multiple flavors & schemas, checkout from the `env_config` branch:
 
 ```bash
 git checkout origin/env_config
@@ -49,9 +53,9 @@ npm install
 yarn install
 ```
 
-### Running the App
+### 🚀 Running the App
 
-#### For Android
+#### 📱 For Android
 
 ```bash
 # using npm
@@ -74,7 +78,7 @@ npm run android-prod-bundle
 
 ```
 
-#### For iOS
+####  For iOS
 
 > **INFO** :- If you are having trouble with iOS, try to reinstall the dependencies by running:
 
@@ -93,33 +97,44 @@ npm run ios-prod
 
 ```
 
-> **Note**: For more command details check out the `package.json` scripts
+> **Note**: For further command details, check the `scripts` section in the `package.json`.
 
-## Project Structure
+## 🗂 Project Structure
 
-The project structure follows a modular pattern for easy maintenance and scalability:
+The project follows a modular architecture, making it scalable and easy to maintain. Below is the directory structure of the project:
 
-- **src:** Contains the source code of the React Native application, and every folder contains barrel files `index.ts` to import different files from a unique path.
-  - **assets:** Images, fonts, and other static assets.
-  - **components:** Reusable UI components.
-  - **navigation:** Navigation setup and configurations.
-  - **screens:** App screens and their components, and every components folder contains:
-    - `screenName.tsx`: _The TypeScript file for the component._
-    - `model.d.ts`: _The file would typically define the expected structure and types of data that your application expects from the API._
-    - `style.ts`: _The styles for the component._
-    - `helper.ts`: _Any helper functions related to the component._
-  - **redux:** Redux store, actions, and reducers.
-  - **services:** Network services, Socket services.
-  - **hooks:** Custom React hooks for shared logic.
-  - **i18n:** Internationalization setup and language files.
-  - **theme:** Theme-related files for consistent styling.
-  - **types:** TypeScript type definitions.
-  - **utils:** General utility functions.
+```bash
+RNBP/
+├── src/                       # Source code for the React Native app
+│   ├── assets/                # Static assets (images, fonts, etc.)
+│   ├── components/            # Reusable UI components
+│   ├── navigation/            # Navigation setup and configurations
+│   ├── screens/               # App screens and their components
+│   │   ├── screenName.tsx     # Main component file for each screen
+│   │   ├── model.ts           # Type definitions for API responses/data models
+│   │   ├── style.ts           # Styles for the component
+│   │   └── helper.ts          # Helper functions for the component
+│   ├── redux/                 # Redux store, actions, and reducers
+│   ├── services/              # Network and Socket services
+│   ├── hooks/                 # Custom React hooks for shared logic
+│   ├── i18n/                  # Internationalization setup and language files
+│   ├── theme/                 # Theme-related files for consistent styling
+│   ├── types/                 # TypeScript type definitions
+│   └── utils/                 # Utility functions
+├── App.tsx                    # Main entry point of the React Native app
+├── index.js                   # Entry point for the React Native app, registers the app with AppRegistry
+├── app.json                   # App configuration file
+├── metro.config.js            # Metro bundler configuration
+├── babel.config.js            # Babel configuration file
+├── package.json               # Project dependencies and scripts
+├── tsconfig.json              # TypeScript configuration
+└── .gitignore                 # Git ignore file
+```
 
-## Features
+## 🌟 Features
 
-- **React Navigation:** Integrated navigation for a smooth user experience.
-- **Redux:** State management for your application. Built with `redux-persit`,`redux-saga`,`redux-toolkit`.
+- **React Navigation:** Simplified and efficient navigation for a great user experience.
+- **Redux:** State management using `redux`, `redux-persit`, `redux-saga` and `redux-toolkit`.
 - **Axios:** Configured HTTP client for making API requests.
 - **Formik & Yup:** Form handling with Formik for a simplified and efficient form development process, combined with Yup for schema validation.
 - **i18next:** Internationalization for supporting multiple languages.
@@ -129,26 +144,26 @@ The project structure follows a modular pattern for easy maintenance and scalabi
 - **Internet Info:** Managing network connection.
 - **React Native Config `.env`:** Manage different environments with multiple flavors & schema.
 
-## Upcoming Features
+## 🚧 Upcoming Features
 
-- **Screenshot Prevention**
-- **Deep Linking**
-- **Code Obfuscation**
-- **Rooted/Jailbroken Device Detection**
-- **SSL Pinning**
-- **CodePush**:
+- **📸 Screenshot Prevention**
+- **🔗 Deep Linking**
+- **🔒 Code Obfuscation**
+- **📱 Rooted/Jailbroken Device Detection**
+- **🔐 SSL Pinning**
+- **🚀 CodePush** for over-the-air updates
 
-## Authors
+## 🧑‍💻 Authors
 
 - [Uma Shankar](https://github.com/uma130012/RNBP)
 
-## Support
+## 🤝 Support
 
 If you find this project helpful, please consider giving it a star on GitHub! ⭐
 
-## Feedback
+## 🗣 Feedback
 
-If you have any feedback, please reach out to us at umashankarhajipur@gmail.com
+We’d love to hear your feedback! Reach out to us at umashankarhajipur@gmail.com
 
 ## 🔗 Links
 
